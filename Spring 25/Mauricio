@@ -1,0 +1,40 @@
+# TurtleBot2 Charging Station Project (Spring 2025)
+
+## Project Mission
+
+The mission of this project was to design and implement a robust, low-cost charging infrastructure that enables TurtleBot robots 
+to operate fully autonomously over extended periods. Recognizing that long-term robot deployment is limited by the need for human 
+intervention during battery depletion, the project developed a custom docking and wireless charging system integrated with the 
+TurtleBot’s onboard sensing and navigation. The solution allows robots to continuously monitor their battery state, locate the 
+nearest charging station, and reliably dock and recharge without human assistance. By addressing one of the critical barriers to 
+autonomy, this work contributes to the scalability of multi-robot fleets in real-world environments, advancing the vision of self-
+sustaining robotic systems for research, industrial, and service applications.
+
+## Materials bought
+
+Several materials were bought throughout the Spring semester of 2025 to create the TurtleBot2's prototype charging station. 
+The following list highlights all of the materials succesfully implemented into the prototype which are to be bought for all
+the charging stations.
+
+1. Pigtail wires: 5.5x2.1mm female. The link foor the original item bought was not found, however, the same wires can be found on 
+Amazon. One pigtail wire s used per chargng station. Link: https://shorturl.at/qTmx7 (Price: $9.19 for 20 pcs)
+2. Copper Tape: Two roles of tape should yield more than enough for all 7 stations (buy one more since the lab already has one). 
+Important note: any coper tape can be bought as long as it is conductive. Link: https://shorturl.at/tJqcn (Prce: $7.99)
+3. Silicone Pads: For more friction between the station and the surface it stands on. There are still leftover silicone pads
+from the original order. Buy 1-2 more packages. Link: https://shorturl.at/9vXdI (Price: $9.99)
+4. Power Supply Adaptable for Pigtal Wires: (5.5x2.1mm male). Link: https://shorturl.at/tJqcn (Price: $19.99 for each)
+
+Total cost for all the new items bought: Approximately $157.10
+
+Here's a list of items bought for the original charging station which did not work and should not be bought for the next ones:
+
+1. Tungsten weights: Were bought in attempts to add more weight to the charging station so it would stay in place as the 
+TurtleBot climbed on it. They were too small and too expensive. The internal power supply functions as weight. 
+2. IR Transmitters: Were bought to implement the IR localization method between the charging station and TurtleBot. The
+project was unsuccesful.
+
+## CAD files
+
+The following files were the files utilized in AutoCAD 2025 to design and 3D print the charging station prototype. As of Spring 2025
+There should not be any additional changes required, but they may be done by downloading these files if necessary. (files are found
+in the CAD folder)
