@@ -17,3 +17,5 @@ Daniel
 Chester
 - Exploring what Daniel did
 - Be prepare for upcoming demos
+
+### 01 | August 28th, 2025
