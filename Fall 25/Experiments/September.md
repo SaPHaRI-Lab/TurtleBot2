@@ -40,3 +40,23 @@
 		- one TurtleBot
 		- two or more TurtleBots
 - Raspberry Pi 6 still reinstall
+
+### September 9th, 2025
+
+**Objective:** Continue checking Raspberry Pi
+
+**Issues:**
+- Raspberry Pi 6: Cannot connect to TurtleBot
+	- After `roslaunch turtlebot_bringup minimal.launch`
+	- Errors:
+		- `[WARN] [1757445387.856245908]: Kobuki : device does not (yet) available, is the usb connected?.`
+		- `[WARN] [1757445388.107057347]: Kobuki : no data stream, is kobuki turned on?`
+	- Solution:
+		- `sudo apt-get install ros-noetic-kobuki-ftdi -y `
+
+**Result:**
+- Raspberry Pi 6: Successfully to connect to TurtleBot
+
+### September 10th, 2025
+
+**Objective:** Continue checking Raspberry Pi

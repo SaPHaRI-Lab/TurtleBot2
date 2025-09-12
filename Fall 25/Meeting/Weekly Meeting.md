@@ -19,3 +19,15 @@ Chester
 - Be prepare for upcoming demos
 
 ### 01 | August 28th, 2025
+
+[Updates](https://docs.google.com/presentation/d/1kSUqoPkHfo8Crlw1NfXShhJG_tkna6BWwKSUpwI-MJI/edit?usp=share_link) 
+
+Make a project plan for fall semester.
+
+### 02 | September 4th, 2025
+
+[Check Raspberry Pis & TurtleBots](https://docs.google.com/presentation/d/1dKgtRACuyv1lp8LIm3BzKk-ymYhMV2m7rJzTD6pw7-Y/edit?usp=sharing)
+
+- Update progress
+
+### 03 | September Xth, 2025
