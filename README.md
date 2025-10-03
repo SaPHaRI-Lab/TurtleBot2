@@ -690,6 +690,7 @@ rfdevice.cleanup()
 - `roslaunch turtlebot_bringup minimal.launch`
 - `roslaunch rplidar_ros rplidar_a1.launch`
 - PS. If lidar sensor error with exit code 255, please check the USB port
+	- `ls /dev/ttyUSB*`
 
 
 ### Configuration GMapping before do mapping

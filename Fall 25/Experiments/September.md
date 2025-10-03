@@ -57,6 +57,18 @@
 **Result:**
 - Raspberry Pi 6: Successfully to connect to TurtleBot
 
-### September 10th, 2025
+### September 27th, 2025
 
-**Objective:** Continue checking Raspberry Pi
+**Objective:** Try to map the lab area
+
+**Result:** Map not occur
+
+### September 30th, 2025
+
+**Objective:** Fixed mapping
+
+**Solution:** Make sure you add all key option
+- Map needs to added
+
+**Result:** Can map the lab area
+![[newmap100225.jpeg]]

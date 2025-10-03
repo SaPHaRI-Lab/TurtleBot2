@@ -45,3 +45,28 @@ n/a
 
 Send to zane, sahar, and austin
 
+### 03 | September 22th, 2025
+
+**Lab Meeting:**
+Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **October 6th, 2025**
+
+**Discussion Items:**
+
+
+**Individual Updates:**
+number in alphabet
+
+**Chester** - 16 letters
+- **Introduction:** Chester, first year PhD student in EE. I am working on TurtleBot.
+- **Accomplishments:**
+	- Complete fixing 90% of the Raspberry Pi
+		- the rest 10% is to control the TurtleBot by wireless controller
+	- We finish first part of the overleaf README
+	- paper review for the slam for map the environment beforehand or not
+	- I created the document for motion capture in the drive
+	- I finished robotic class hw in time.
+- **Goals:**
+	- Finish the control (wireless controller) part
+	- Start mapped the lab space again for future autonomous navigation
+	- Try to finish README in both overleaf and motion capture
+- **Help:** I do not need one but if you guys do let me know.
