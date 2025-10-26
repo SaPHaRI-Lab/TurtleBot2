@@ -70,3 +70,56 @@ number in alphabet
 	- Start mapped the lab space again for future autonomous navigation
 	- Try to finish README in both overleaf and motion capture
 - **Help:** I do not need one but if you guys do let me know.
+
+### 04 | September 22th, 2025
+
+**Lab Meeting:**
+Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **October 20th, 2025**
+
+**Discussion Items:**
+
+
+**Individual Updates:**
+n/a
+
+**Chester** - 
+- **Introduction:** Chester, first year PhD student in EE. I am working on TurtleBot and RoboTales.
+- **Accomplishments:**
+	- 100% complete fixing Raspberry Pi!
+	- I can map the environment again and I already mapped it
+	- Prepared the DEMO included script
+	- Start reading the paper for the supervised review
+	- I tested the VR for Zane
+	- We almost finish second part of the overleaf README, I moved into onboarding 
+	- Thank you Gabriela to took a lead for mocap README
+- **Goals:**
+	- Used ESP32 as beacon, make TurtleBot to navigate to the charging station and obstacle avoidance, if possible
+	- Documenting more in both overleaf and motion capture README
+- **Help:** I have some difficulty with ESP32. After I try again, If it not working, I would like Ju-Hung to help me out. Thanks
+
+### 05 | October 20th, 2025
+
+**Lab Meeting:**
+Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **November 3rd, 2025**
+
+**Discussion Items:**
+
+
+**Individual Updates:**
+n/a
+
+**Chester** - 
+- **Introduction:** Chester, first year PhD student in EE. I am working on TurtleBot and RoboTales.
+- **Accomplishments:**
+	- DEMO last week!
+		- Great job guys and Thank you Gabriela for help me out
+	- Be able to upload the code to ESP32
+		- Thank you Ju-Hung for help me out
+		- ESP32 is now a beacon
+	- BUT even though I can use ESP32 as a beacon now but my pis still cannot detect the signals and for obstacle avoidance it should avoid before hit the obstacle not after hit
+		- Thank you Dr. Block for advice
+		- I am still working on that
+- **Goals:**
+	- Make TurtleBot to autonomous navigate to the charging station
+	- Obstacle Avoidance
+- **Help:** I do not need one but I am open to help you guys if needed.
