@@ -53,154 +53,80 @@ ROS navigation stack with velocity smoother and safety (reactive) controller
 - Create a python script
 ```
 #!/usr/bin/env python3
-
 import rospy
-
 import math
-
 from geometry_msgs.msg import Twist
-
 from sensor_msgs.msg import LaserScan
 
-  
-
 SAFE_DISTANCE = 0.60 # slow down if below this
-
 STOP_DISTANCE = 0.30 # stop if below this
-
   
-
 class DynamicAvoidance:
+	def __init__(self):
+		rospy.init_node("dynamic_avoidance")
+		
+		# Subscribers & publisher
+		rospy.Subscriber("/cmd_vel_nav", Twist, self.nav_callback)
+		rospy.Subscriber("/scan", LaserScan, self.scan_callback)
+		self.cmd_pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size=10)
+		
+		self.min_front_distance = float('inf')
 
-def __init__(self):
+	def scan_callback(self, msg):
+		# Extract front 60 degrees (30° left, 30° right)
+		total = len(msg.ranges)
+		width = int(total * 60.0 / 360.0) # number of samples for 60 degrees
+		half = width // 2
+	
+		# Front center at index 0 (LaserScan starts at +X forward)
+		front_ranges = msg.ranges[:half] + msg.ranges[-half:]
+		
+		# Filter bad values
+		clean = [r for r in front_ranges if not math.isnan(r) and r > 0.01 and r < msg.range_max]
+		
+		if clean:
+			self.min_front_distance = min(clean)
+		else:
+			self.min_front_distance = float('inf') 
+		
+		rospy.loginfo_throttle(1.0, f"Front distance = {self.min_front_distance:.2f} m")
 
-rospy.init_node("dynamic_avoidance")
-
-  
-
-# Subscribers & publisher
-
-rospy.Subscriber("/cmd_vel_nav", Twist, self.nav_callback)
-
-rospy.Subscriber("/scan", LaserScan, self.scan_callback)
-
-self.cmd_pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size=10)
-
-  
-
-self.min_front_distance = float('inf')
-
-  
-
-def scan_callback(self, msg):
-
-# Extract front 60 degrees (30° left, 30° right)
-
-total = len(msg.ranges)
-
-width = int(total * 60.0 / 360.0) # number of samples for 60 degrees
-
-half = width // 2
-
-  
-
-# Front center at index 0 (LaserScan starts at +X forward)
-
-front_ranges = msg.ranges[:half] + msg.ranges[-half:]
-
-  
-
-# Filter bad values
-
-clean = [r for r in front_ranges if not math.isnan(r) and r > 0.01 and r < msg.range_max]
-
-  
-
-if clean:
-
-self.min_front_distance = min(clean)
-
-else:
-
-self.min_front_distance = float('inf')
-
-  
-
-rospy.loginfo_throttle(1.0, f"Front distance = {self.min_front_distance:.2f} m")
-
-  
-
-def nav_callback(self, msg):
-
-safe = Twist()
-
-  
-
-d = self.min_front_distance
-
-  
-
-# HARD STOP (too close)
-
-if d < STOP_DISTANCE:
-
-rospy.loginfo_throttle(0.5, "HARD STOP")
-
-safe.linear.x = 0.0
-
-safe.angular.z = 0.0
-
-  
-
-# STRONG SLOW + STRONG TURN
-
-elif d < 0.45:
-
-rospy.loginfo_throttle(0.5, "STRONG AVOIDANCE")
-
-safe.linear.x = 0.03
-
-safe.angular.z = 0.6
-
-  
-
-# LIGHT SLOW + LIGHT TURN
-
-elif d < SAFE_DISTANCE:
-
-rospy.loginfo_throttle(0.5, "AVOIDANCE")
-
-safe.linear.x = min(msg.linear.x, 0.08)
-
-safe.angular.z = 0.3
-
-  
-
-# SAFE → follow move_base but clamp max speed
-
-else:
-
-safe = msg
-
-safe.linear.x = min(msg.linear.x, 0.15) # <---- LIMIT SPEED
-
-  
-
-self.cmd_pub.publish(safe)
-
-  
+	def nav_callback(self, msg):
+		safe = Twist()
+		
+		d = self.min_front_distance
+		
+		# E-STOP (too close)
+		if d < STOP_DISTANCE:
+			rospy.loginfo_throttle(0.5, "E-STOP")
+			safe.linear.x = 0.0
+			safe.angular.z = 0.0
+		
+		# STRONG SLOW + STRONG TURN
+		elif d < 0.45:
+			rospy.loginfo_throttle(0.5, "STRONG AVOIDANCE")
+			safe.linear.x = 0.03
+			safe.angular.z = 0.6
+			
+		# LIGHT SLOW + LIGHT TURN
+		elif d < SAFE_DISTANCE:
+			rospy.loginfo_throttle(0.5, "AVOIDANCE")
+			safe.linear.x = min(msg.linear.x, 0.08)
+			safe.angular.z = 0.3
+		
+		# SAFE → follow move_base but clamp max speed
+		else:
+			safe = msg
+			safe.linear.x = min(msg.linear.x, 0.15) # <---- LIMIT SPEED
+			
+		self.cmd_pub.publish(safe)
 
 if __name__ == "__main__":
-
-try:
-
-DynamicAvoidance()
-
-rospy.spin()
-
-except rospy.ROSInterruptException:
-
-pass
+	try:
+		DynamicAvoidance()
+		rospy.spin()
+	except rospy.ROSInterruptException:
+		pass
 ```
 
 **Result:** Stop right in front of me
