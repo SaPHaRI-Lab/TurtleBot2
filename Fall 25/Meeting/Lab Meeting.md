@@ -52,7 +52,6 @@ Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **October 6th, 
 
 **Discussion Items:**
 
-
 **Individual Updates:**
 number in alphabet
 
@@ -122,4 +121,31 @@ n/a
 - **Goals:**
 	- Make TurtleBot to autonomous navigate to the charging station
 	- Obstacle Avoidance
+- **Help:** I do not need one but I am open to help you guys if needed.
+
+### 06 | November 3rd, 2025
+
+**Lab Meeting:**
+Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **November 17th, 2025**
+
+**Discussion Items:**
+
+
+**Individual Updates:**
+n/a
+
+**Chester** - 
+- **Introduction:** Chester, first year PhD student in EE. I am working on TurtleBot and RoboTales.
+- **Accomplishments:**
+	- From last meeting I can use ESP32 as a beacon to publish the signal but my pis cannot detected.
+		- Now my pis can detected
+		- I created a Python script for TurtleBot to autonomously navigate to the charging station, but it is not good enough, which still in the process.
+	- WE already done our first two participants in RoboTales user study on Sunday
+	- Finished first draft of review an article
+	- Classes plan for next semester
+- **Goals:**
+	- Make TurtleBot to autonomous navigate to the charging station better
+	- Obstacle Avoidance
+	- Literature review for PhD planner
+	- Continue user study for RoboTales
 - **Help:** I do not need one but I am open to help you guys if needed.
