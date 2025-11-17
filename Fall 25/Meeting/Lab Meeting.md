@@ -149,3 +149,34 @@ n/a
 	- Literature review for PhD planner
 	- Continue user study for RoboTales
 - **Help:** I do not need one but I am open to help you guys if needed.
+
+### 07 | November 17th, 2025
+
+**Lab Meeting:**
+Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **December 1st, 2025**
+
+**Discussion Items:**
+
+
+**Individual Updates:**
+n/a
+
+**Chester** - 
+- **Introduction:** Chester, first year PhD student in EE. I am working on TurtleBot and RoboTales.
+- **Accomplishments:**
+	- I am still working on the autonomous navigate
+		- It better than last meeting but not enough
+	- Obstacle avoidance
+		- My TurtleBot can stop right in front of me/obstacle instead of hitting me
+		- BUT still need to fine tune the parameters
+			- Right now TurtleBot must be drive very slowly
+			- Its stop to close to the object
+	- I found one interesting paper that related to one of the work package for my PhD planner, and almost done for reading it
+	- WE will finish last two participant tomorrow for RoboTales user study
+- **Goals:**
+	- Make TurtleBot to autonomous navigate to the charging station better
+	- Fine tune obstacle Avoidance
+		- Obstacle avoidance + autonomous navigation
+	- More literature review for PhD planner
+	- Try to finish first draft as soon as possible, after finished the user study
+- **Help:** I do not need one but I am open to help you guys if needed.
