@@ -130,3 +130,38 @@ if __name__ == "__main__":
 ```
 
 **Result:** Stop right in front of me
+
+## November 26th, 2025
+
+**Objective:** Autonomous Navigation
+
+**Experiment:** Change beacon to specific name because even I unplug it, pis still detect it
+- Script
+```
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEAdvertising.h>
+
+#define DEVICE_NAME "TurtleBot_Station"
+
+void setup() {
+  Serial.begin(115200);
+  BLEDevice::init(DEVICE_NAME);
+
+  BLEAdvertising *advertising = BLEDevice::getAdvertising();
+
+  BLEAdvertisementData data;
+  data.setFlags(ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT);
+  data.setName(DEVICE_NAME);
+
+  advertising->setAdvertisementData(data);
+  advertising->start();
+  BLEDevice::setPower(ESP_PWR_LVL_P9);
+
+  Serial.println("Broadcasting BLE with NAME ONLY");
+}
+
+void loop() {
+  delay(2000);
+}
+```

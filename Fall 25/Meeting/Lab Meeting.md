@@ -180,3 +180,39 @@ n/a
 	- More literature review for PhD planner
 	- Try to finish first draft as soon as possible, after finished the user study
 - **Help:** I do not need one but I am open to help you guys if needed.
+
+### 08 | December 1st, 2025
+
+**Lab Meeting:**
+Next lab meeting, meet two weeks from today, at **3:30 p.m.** on **December XX, 2025**
+
+**Discussion Items:**
+
+HRI class -> how to make a good presentation
+
+LnL -> introduction (motivation), recap, current, future plan, goal, and lesson
+
+**Individual Updates:**
+n/a
+
+**Chester** - 
+- **Introduction:** Chester, first year PhD student in EE. I am working on TurtleBot and RoboTales.
+- **Accomplishments:**
+	- I updated the beacon
+		- It can advertising the name that I want now
+	- Then for the autonomous navigation I also update the filter for that specific and also the MAC address of beacon
+		- So, it better but still not get close to the beacon enough as I want
+	- I did fine tune the parameter for the obstacle avoidance
+	- I reached out to Daniel like a while ago about the battery monitoring
+		- He gets back to me like 2 months after I sent, and its not help me
+		- So, I created one myself
+	- We are done for storyboard, transcript, and voiceover for the SDC submission
+		- Can't wait to see the first draft from Emily
+	- For the mocap I suppose to be trained last Wed but Mackenzie sick
+		- New schedule is on this Wed
+- **Goals:**
+	- Make autonomous navigation better
+	- Combine obstacle avoidance and autonomous navigation
+	- SDC submission for RoboTales
+	- Finish the presentation for LnL and RoboTales
+- **Help:** No need any helps for now, Just wish, I could have more time.
